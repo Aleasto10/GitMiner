@@ -16,24 +16,27 @@ public class Commit {
     @Id
     @JsonProperty("id")
     private String id;
+
     @JsonProperty("title")
     private String title;
 
     @JsonProperty("message")
     @Column(columnDefinition="TEXT")
     private String message;
+
     @JsonProperty("author_name")
     @NotEmpty(message = "Author name cannot be empty.")
     private String authorName;
+
     @JsonProperty("author_email")
     private String authorEmail;
+
     @JsonProperty("authored_date")
     @NotEmpty(message = "Author date cannot be empty.")
     private String authoredDate;
 
     @JsonProperty("web_url")
-    @NotEmpty(message = "URL cannot be empty." +
-            "")
+    @NotEmpty(message = "URL cannot be empty.")
     private String webUrl;
 
     public String getId() {
