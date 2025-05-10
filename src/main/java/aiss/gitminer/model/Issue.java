@@ -148,65 +148,20 @@ public class Issue {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(Issue.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("id");
-        sb.append('=');
-        sb.append(((this.id == null) ? "<null>" : this.id));
-        sb.append(',');
-        sb.append("title");
-        sb.append('=');
-        sb.append(((this.title == null) ? "<null>" : this.title));
-        sb.append(',');
-        sb.append("description");
-        sb.append('=');
-        sb.append(((this.description == null) ? "<null>" : this.description));
-        sb.append(',');
-        sb.append("state");
-        sb.append('=');
-        sb.append(((this.state == null) ? "<null>" : this.state));
-        sb.append(',');
-        sb.append("createdAt");
-        sb.append('=');
-        sb.append(((this.createdAt == null) ? "<null>" : this.createdAt));
-        sb.append(',');
-        sb.append("updatedAt");
-        sb.append('=');
-        sb.append(((this.updatedAt == null) ? "<null>" : this.updatedAt));
-        sb.append(',');
-        sb.append("closedAt");
-        sb.append('=');
-        sb.append(((this.closedAt == null) ? "<null>" : this.closedAt));
-        sb.append(',');
-        sb.append("labels");
-        sb.append('=');
-        sb.append(((this.labels == null) ? "<null>" : this.labels));
-        sb.append(',');
-        sb.append("author");
-        sb.append('=');
-        sb.append(((this.author == null) ? "<null>" : this.author));
-        sb.append(',');
-        sb.append("assignee");
-        sb.append('=');
-        sb.append(((this.assignee == null) ? "<null>" : this.assignee));
-        sb.append(',');
-        sb.append("votes");
-        sb.append('=');
-        sb.append(((this.votes == null) ? "<null>" : this.votes));
-        sb.append(',');
-        sb.append("comments");
-        sb.append('=');
-        sb.append(((this.comments == null) ? "<null>" : this.comments));
-        sb.append(',');
 
-        if (sb.charAt((sb.length() - 1)) == ',') {
-            sb.setCharAt((sb.length() - 1), ']');
-        } else {
-            sb.append(']');
-        }
-        return sb.toString();
+        return "Issue{ " +
+                "id = " + id +
+                ", title = " + title +
+                ", description = " + description +
+                ", state = " + state +
+                ", created at = " + createdAt +
+                ", updated at = " + updatedAt +
+                ", closed at = " + closedAt +
+                ", labels = " + labels +
+                ", author = " + author +
+                ", assignee = " + assignee +
+                ", votes = " + votes +
+                ", comments = " + comments +
+                "}";
     }
-
-
-
 }
