@@ -20,14 +20,14 @@ public class ProjectController {
     public List<Project> getProjects() {return projectRepository.findAll();}
 
     @GetMapping("/{id}")
-    public Project getProjectById(@RequestParam String id) {return projectRepository.findById(id).get();}
+    public Project getProjectById(@PathVariable String id) {return projectRepository.findById(id).get();}
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public Project createProject(@RequestBody Project project) {return projectRepository.save(project);}
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public Project updateProject(@PathVariable String id, @RequestBody Project project) {
 
         Project old = projectRepository.findById(id).get();
