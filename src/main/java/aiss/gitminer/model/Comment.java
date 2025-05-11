@@ -27,7 +27,6 @@ public class Comment {
     private User author;
 
     @JsonProperty("created_at")
-    @NotEmpty(message = "The field created_at cannot be empty.")
     private String createdAt;
     @JsonProperty("updated_at")
     private String updatedAt;
